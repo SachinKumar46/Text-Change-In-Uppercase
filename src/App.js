@@ -14,9 +14,9 @@ function App() {
   return (
    <div className="container">
     <div className="row">
-      <div className="col-6 m-auto my-5 border border-black rounded py-4">
+      <div className="col-6 m-auto my-5 border border-black rounded py-4 bg-black">
       <form action="" >
-      <label htmlFor="" className='form-label fw-bold fs-4'>Please Type we'll change text in uppercase</label>
+      <label htmlFor="" className='form-label fw-bold fs-4 text-white'>Please Type we'll change text in uppercase</label>
     <input type="search" className='form-control my-4' placeholder='Type here'  autoComplete='off' value={text} onChange={handleOnChange}/>
     <button type='button' className='btn btn-sm btn-primary' onClick={handleOnClick}>Submit</button>
    </form>
