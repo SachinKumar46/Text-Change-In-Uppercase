@@ -17,6 +17,11 @@ function App() {
     setText(newText);
   }
 
+  const handleOnClickClearTxt = () => {
+    let newText =("")
+    setText(newText);
+  }
+
 
   return (
     <div className="container">
@@ -27,11 +32,12 @@ function App() {
             <textarea name="" id="" cols="30" rows="5" className='form-control my-3' value={text} onChange={handleOnChange}></textarea>
             <button type='button' className='btn btn-sm btn btn-outline-light' onClick={handleOnClickUppercase}>Convert To Uppercase</button>
             <button type='button' className='btn btn-sm btn btn-outline-light mx-3' onClick={handleOnClickLowercase}>Convert To Lowercase</button>
+            <button type='button' className='btn btn-sm btn btn-outline-light' onClick={handleOnClickClearTxt}>Clear Text</button>
           </form>
           <div className="container text-white mt-4">
             <h3 className=' mt-4'>Preview</h3>
             <p className=''>{text}</p>
-            <p>This preview with {text.split(" ").length} Words and {text.length} Chracter</p>
+            <p>This preview with {text.split("").length} Words and {text.length} Chracter</p>
           </div>
         </div>
       </div>
