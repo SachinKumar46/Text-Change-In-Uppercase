@@ -12,18 +12,21 @@ export default function TextForm(props) {
   const handleOnClickUppercase = () => {
     let newText = text.toUpperCase()
     setText(newText);
+    props.showAlert("Text Converted in Uppercase","success")
   }
 
   // for Lowercase text
   const handleOnClickLowercase = () => {
     let newText = text.toLowerCase()
     setText(newText);
+    props.showAlert("Text Converted in LowerCase","success")
   }
 
   // For clear text
   const handleOnClickClearTxt = () => {
     let newText =("")
     setText(newText);
+    props.showAlert("Text has been Cleared","success")
   }
 
   // for copy text
@@ -31,12 +34,15 @@ export default function TextForm(props) {
     var text=document.getElementById("rootId");
     text.select();
     navigator.clipboard.writeText(text.value)
+    props.showAlert("Text has been copied","success")
   }
 
   // for remove extra space
   const handleOnRemoveExtraSpace=()=>{
     let newtText=text.split(/[ ]+/);
     setText(newtText.join(" "))
+    props.showAlert("Removed Extra Space","success")
+
   }
   return (
     <>
@@ -45,7 +51,7 @@ export default function TextForm(props) {
         <div className="col-8 m-auto my-4 border  rounded py-4 ">
           <form action="" >
             <label htmlFor="" className='form-label fw-bold fs-4' >Please Type we'll change text in uppercase</label>
-            <textarea name="" id="rootId" cols="30" rows="5" className='form-control my-3' value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"#1f1b40":"white",color:props.mode==="dark"?"white":"black"}}></textarea>
+            <textarea name="" id="rootId" cols="30" rows="5" className='form-control my-3' value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"#042743":"white",color:props.mode==="dark"?"white":"black"}}></textarea>
             <button type='button' className='btn btn-sm btn btn-outline-primary mx-1' onClick={handleOnClickUppercase}>Convert To Uppercase</button>
             <button type='button' className='btn btn-sm btn btn-outline-primary mx-1' onClick={handleOnClickLowercase}>Convert To Lowercase</button>
             <button type='button' className='btn btn-sm btn btn-outline-primary mx-1' onClick={handleOnClickClearTxt}>Clear Text</button>
