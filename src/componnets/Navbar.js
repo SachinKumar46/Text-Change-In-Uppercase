@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 export default function Navbar(props) {
     return (
@@ -12,14 +12,14 @@ export default function Navbar(props) {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className={`nav-link active text-${props.mode==="light"?"dark":"light"}`} aria-current="page" href="#">Home</a>
+                                <a className={`nav-link active text-${props.mode==="light"?"dark":"light"}`} aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link  text-${props.mode==="light"?"dark":"light"}`} href="#">Link</a>
+                                <a className={`nav-link  text-${props.mode==="light"?"dark":"light"}`} href="/">Link</a>
                             </li>
                             
                             <li className="nav-item">
-                                <a className={`nav-link active text-${props.mode==="light"?"dark":"light"}`}>About</a>
+                                <a className={`nav-link active text-${props.mode==="light"?"dark":"light"}`} href="/">About</a>
                             </li>
                         </ul>
                         <form className="d-flex align-items-center" role="search">

@@ -12,8 +12,7 @@ function App() {
     setAlert({
       msg:message,
       type:type
-    }
-    )
+    })
     setTimeout(() => {
       setAlert(alert)
     }, 2000);
